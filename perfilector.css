@@ -16,3 +16,17 @@ h1{
     margin: 0 auto;
 }
 
+nav a{ 
+    color: #fff;
+}
+
+nav a{
+    text-decoration: none;
+}
+nav a:hover{
+    background-color: orange;
+    color: #fff;
+    text-decoration: none;
+    padding: 2px;
+}
+
