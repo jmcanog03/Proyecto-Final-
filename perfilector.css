@@ -2,6 +2,10 @@
     margin: 0;
     padding: 0;
 }
+@import url('https://fonts.googleapis.com/css2? family= Gideon+Roman & display=swap');
+
+
+
 
 /* Cabecera (Header) */
 header{
@@ -30,3 +34,27 @@ nav a:hover{
     padding: 2px;
 }
 
+
+/* Section */
+
+section h2{
+    text-align: center;
+    font-family: 'Gideon Roman', cursive;
+}
+
+.image{
+    margin-left: 100px;
+    margin-top: 10px;
+}
+
+.card-text{
+    font-size: 15px;
+}
+
+.card-body{
+    margin-left: 10px;
+}
+
+.card-body1{
+    margin-right: 10px;
+}
