@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="Description" content="Enter your description here" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Title</title>
+
+    <style>
+        .error{
+            color: red;
+            font-size: 9pt;
+       
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="row mt-5">
+            <form>
+                <div class="form-group">
+                    <label for="">Usuario</label>
+                    <input type=" text" class="form-control" id="usuario">
+                </div>
+                <div class="form-group">
+                    <label for="">Password</label>
+                    <input type="password" class="form-control" id="clave">
+                </div>
+
+                <p class="error" id="error"></p>
+                <input type="button" onclick="Validar()" value="Enviar" class="btn btn-primary">
+
+
+            </form>
+        </div>
+    </div>
+
+    <script>
+
+        function Validar() {
+
+            //Coger los datos del formulario 
+            var usuario = document.getElementById("usuario").value;
+            var clave = document.getElementById("clave").value;
+
+            if (usuario == "admin" && clave == "1234") {
+
+                //Si somos administrador nos vamos a una web administrador
+                window.location.pathname = '/administrador.html';
+
+
+
+            } else {
+                //Si algun dato está erroneo mostramos un mensaje
+                document.getElementById("error").innerHTML="Datos del usuario erroneo";
+            }
+
+            if (usuario == "pepe" && clave == "1234") {
+
+                //Si somos usuario nos vamos a una web administrador
+                window.location.pathname = '/lector.html';
+
+            } else {
+                //Si algun dato está erroneo mostramos un mensaje
+                document.getElementById("error").innerHTML="Datos del usuario erroneo";
+        
+            }
+
+
+
+        }
+
+    </script>
+
+
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
+</body>
+
+</html>

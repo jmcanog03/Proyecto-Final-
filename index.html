@@ -44,36 +44,28 @@
           </div>
           <div class="modal-body">
             <form>
-              <!-- Usuario -->
+              
+    <div class="container">
+      <div class="row mt-5">
+          <form>
               <div class="form-group">
-                <label for="email">Apodo del Lector</label>
-                <input type="email" class="form-control" type="text" name="email" />
+                  <label for="">Usuario</label>
+                  <input type=" text" class="form-control" id="usuario">
               </div>
-
-              <!-- Password -->
+              
               <div class="form-group">
-                <label for="password">Contraseña</label>
-                <input type="password" class="form-control" type="password" name="password" />
+                  <label for="">Password</label>
+                  <input type="password" class="form-control" id="clave">
               </div>
 
-              <!-- Checkbox -->
-              <div class="row d-flex justify-content-center align-items-center">
-                <div class="col">
-                  <div class="form-check mt-4">
-                    <input type="checkbox" class="form-check-input" checked>
-                    <label for="labelchekbox" class="form-check-label small">Recordar</label>
-                  </div>
-                </div>
-
-                <div class="col">
-                  <a href="#" class="text-black small"> ¿Has olvidado la contraseña?</a>
-                </div>
-              </div>
+              <p class="error" id="error"></p>
+              <input type="button" onclick="Validar()" value="Acceder" class="btn btn-primary">
 
 
-              <!-- Button -->
+          </form>
+      </div>
+  </div>
 
-              <button type="submit" class="btn btn-danger btn-block mt-4">Acceder</button>
 
 
               <div class="text-center mt-4">
@@ -178,7 +170,7 @@
 
               <!-- Button -->
 
-              <button type="submit" class="btn btn-danger btn-block mt-4" id="boton" name="boton" onclick="validación()">Acceder</button>
+              <button type="submit" class="btn btn-danger btn-block mt-4" id="boton" name="boton">Acceder</button>
 
 
               <div class="text-center mt-4">
@@ -274,6 +266,52 @@
   <button type="button" class="btn btn-secondary"><i class="bi bi-facebook"></i> <span class="texto">Comic
       Cloud</span></button>
   </footer>
+
+
+ 
+
+
+
+  <script>
+
+  function Validar() {
+
+      //Coger los datos del formulario 
+      var usuario = document.getElementById("usuario").value;
+      var clave = document.getElementById("clave").value;
+
+      if (usuario == "admin" && clave == "1234") {
+
+          //Si somos administrador nos vamos a una web administrador
+          window.location.pathname = '/administrador.html';
+
+
+
+      } else {
+          //Si algun dato está erroneo mostramos un mensaje
+          document.getElementById("error").innerHTML="Datos del usuario erroneo";
+      }
+
+      if (usuario == "pepe" && clave == "1234") {
+
+          //Si somos usuario nos vamos a una web administrador
+          window.location.pathname = '/perfillector.html';
+
+      } else {
+          //Si algun dato está erroneo mostramos un mensaje
+          document.getElementById("error").innerHTML="Datos del usuario erroneo";
+  
+      }
+
+
+
+  }
+
+</script>
+
+
+
+
 
 
 
