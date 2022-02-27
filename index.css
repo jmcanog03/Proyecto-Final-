@@ -10,7 +10,7 @@ body{
 
 /* Cabecera Lading Page */
 .header{
-    background-image: linear-gradient(120deg, rgba(143, 233, 245, 0.699) 0%, rgba(85, 27, 35, 0.692) 100%), url("../img/header.jpg");
+    background-image: linear-gradient(120deg, rgba(143, 233, 245, 0.699) 0%, rgba(85, 27, 35, 0.692) 100%), url("/img/header.jpg");
     width: 100%;
     height: 650px;
     background-repeat: no-repeat;
