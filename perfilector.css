@@ -62,3 +62,7 @@ section h2{
 .amarillo{
     color: yellow;
 }
+
+h2{
+    background-image: linear-gradient(120deg, rgba(143, 233, 245, 0.699) 0%, rgba(85, 27, 35, 0.692) 100%);
+}
