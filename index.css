@@ -49,18 +49,18 @@ footer{
     font-size: 14pt;
 }
 .bi-instagram{
-    color: orange;
+    color: rgb(226, 112, 255);
 }
 .bi-twitter{
-    color: orange;
+    color: rgb(226, 112, 255);
     margin-left: 10px;
 }
 .bi-facebook{
-    color: orange;
+    color: rgb(226, 112, 255);
     margin-left: 10px;
 }
 .texto{
-    color: blue;
+    color: white;
 }
 
 
@@ -178,4 +178,10 @@ footer{
         margin-bottom: 30px;
     }
 
+}
+
+input{
+    background-color: rgb(174, 99, 245);
+    padding: 10px;
+    color: #fff;
 }
