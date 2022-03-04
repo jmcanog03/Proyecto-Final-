@@ -91,6 +91,10 @@ footer{
 .titulo.right{
     text-align: right;
 }
+.slider{
+    width: 50%;
+    margin-left: 500px;
+}
 
 
 
