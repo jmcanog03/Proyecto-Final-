@@ -4,9 +4,7 @@
     box-sizing: border-box;
 }
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css");
-body{
-    background-color: cyan;
-}
+
 
 /* Cabecera Lading Page */
 .header{
@@ -95,12 +93,6 @@ footer{
     width: 50%;
     margin-left: 500px;
 }
-
-
-
-
-
-
 
 
 /* Section */
