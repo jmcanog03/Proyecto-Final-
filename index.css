@@ -57,8 +57,15 @@ footer{
     color: rgb(226, 112, 255);
     margin-left: 10px;
 }
-.texto{
-    color: white;
+footer a{
+    text-decoration: none;
+    color: #fff;
+}
+
+footer a:hover{
+    background-color: blueviolet;
+    color: #fff;
+    text-decoration: none;
 }
 
 
@@ -177,6 +184,9 @@ footer{
     }
 
 }
+
+
+
 
 input{
     background-color: rgb(174, 99, 245);
