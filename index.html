@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
     integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
   <title>Index.Html</title>
+  <script src="java.js"></script>
 </head>
 
 
@@ -107,11 +108,12 @@
           </div>
           <div class="modal-body">
 
-            <form>
+            <form id="alta" class="alta">
               <!-- Fecha de Nacimiento -->
               <div class="form-group">
-                <label for="email">Fecha de Nacimiento</label>
-                <input type="date" class="form-control" type="text" name="fecha" />
+                <p>Edad: <br>
+                  <input type="text" name="edad" id="edad" maxlength="2" class="bg bg-primary">
+              </p>
               </div>
 
 
@@ -176,7 +178,7 @@
 
               <!-- Button -->
 
-              <button type="submit" class="btn btn-danger btn-block mt-4" id="boton" name="boton">Acceder</button>
+              <button type="submit" class="btn btn-danger btn-block mt-4" onclick="validación()">Acceder</button>
 
 
               <div class="text-center mt-4">
@@ -304,46 +306,15 @@
   </footer>
 
 
- 
-
-
-
-  <script>
-
-  function Validar() {
-
-      //Coger los datos del formulario 
-      var usuario = document.getElementById("usuario").value;
-      var clave = document.getElementById("clave").value;
-
-      if (usuario == "admin" && clave == "1234") {
-
-          //Si somos administrador nos vamos a una web administrador
-          window.location.pathname = '/administrador.html';
-
-
-
-      } else {
-          //Si algun dato está erroneo mostramos un mensaje
-          document.getElementById("error").innerHTML="Datos del usuario erroneo";
-      }
-
-      if (usuario == "josé" && clave == "joseyale") {
-
-          //Si somos usuario nos vamos a una web administrador
-          window.location.pathname = '/perfillector.html';
-
-      } else {
-          //Si algun dato está erroneo mostramos un mensaje
-          document.getElementById("error").innerHTML="Datos del usuario erroneo";
   
-      }
 
 
 
-  }
 
-</script>
+
+
+
+
 
 
 
