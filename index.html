@@ -27,9 +27,10 @@
         Iniciar Sesión
       </button>
       <br>
-      <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#registro">
-        Registrarse
-      </button>
+      
+      <a href="" data-toggle="modal" data-target="#ejemplo">  <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#Modal">
+        Registrate
+      </button> </a>
 
     </div>
 
@@ -74,14 +75,14 @@
                 <p class="small"> Ingresar con redes Sociales </p>
                 <a href="https://www.instagram.com/"> <button type="button" class="btn btn-info"><i class="bi bi-instagram"></i> <span class="texto">Comic
                   Cloud</span></button> </a>
-              <a href="https://twitter.com/?lang=es"> <button type="button" class="btn btn-success"><i class="bi bi-twitter"></i> <span class="texto">Comic
+              <a href="https://twitter.com/?lang=es"> <button type="button" class="btn btn-success ml-2"><i class="bi bi-twitter"></i> <span class="texto">Comic
                   Cloud</span></button> </a>
-             <a href="https://es-es.facebook.com/"> <button type="button" class="btn btn-secondary"><i class="bi bi-facebook"></i> <span class="texto">Comic
+             <a href="https://es-es.facebook.com/"> <button type="button" class="btn btn-secondary mt-2"><i class="bi bi-facebook"></i> <span class="texto">Comic
                   Cloud</span></button> </a>
-                  <a href="https://www.youtube.com/"> <button type="button" class="btn btn-danger"> <i class="bi bi-youtube"></i> <span class="texto">Comic
+                  <a href="https://www.youtube.com/"> <button type="button" class="btn btn-danger mt-2"> <i class="bi bi-youtube"></i> <span class="texto">Comic
                     Cloud</span></button> </a>
             
-                    <a href="https://www.pinterest.es/"> <button type="button" class="btn btn-info"> <i class="bi bi-pinterest"></i> <span class="texto">Comic
+                    <a href="https://www.pinterest.es/"> <button type="button" class="btn btn-dark mt-2"> <i class="bi bi-pinterest"></i> <span class="texto">Comic
                       Cloud</span></button> </a>
 
               </div>
@@ -97,119 +98,114 @@
     </div>
 
     <!-- Modal Registrarse -->
-    <div class="modal fade" id="registro" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    
+    <div class="modal" id="ejemplo" tabindex="-1 ">
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Registrarse</h5>
+            <h5 class="modal-title"> Registrate </h5>
             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
               <span aria-hidden="true">&times;</span>
             </button>
           </div>
           <div class="modal-body">
+            
+              <form id="alta" name="alta">
 
-            <form id="alta" class="alta">
-              <!-- Fecha de Nacimiento -->
-              <div class="form-group">
-                <p>Edad: <br>
-                  <input type="text" name="edad" id="edad" maxlength="2" class="bg bg-primary">
-              </p>
-              </div>
+                  <p>
+                    <label for="email">Introduce tu Correo Eléctronico</label>
+              <input type="email" class="form-control" minlength="11" maxlength="40" type="text" required
+                name="email">
+                  </p>
+                  <p> Edad <br> <input type="text" name="edad" id="edad" maxlength="2">
 
+                  </p>
+                  <label for="password">Contraseña para Acceder</label>
+                  <input type="password" class="form-control" type="password" minlength="8" name="password" />
 
-              <!-- Email -->
+                  <p>
+                    <label for="apodo">Apodo para Acceder</label>
+                    <input type="text" class="form-control" name="apodo" required />
+                  </p>
 
-              <div class="form-group">
-                <label for="email">Introduce tu Correo Eléctronico</label>
-                <input type="email" class="form-control" minlength="11" maxlength="40" type="text" required
-                  name="email">
-              </div>
+                  <p>
+                    <label for="nombre y apellidos">Nombre y Apellidos (Opcional)</label>
+                    <input type="text" class="form-control" name="nombreyapellidos" />
+                  </p>
 
-              <!-- Password de acceso -->
-              <div class="form-group">
-                <label for="password">Contraseña para Acceder</label>
-                <input type="password" class="form-control" type="password" minlength="8" name="password" />
-              </div>
+                  <p>
+                    Ciudad <select name="ciudad" id="ciudad">
+                      <option value="nada"> Seleccionar ciudad </option>
+                      <option value="Badajoz"> Badajoz </option>
+                      <option value="Caceres"> Caceres </option>
+                      <option value="Almendralejo"> Almendralejo </option>
+                      <option value="Merida"> Merida </option>
+                  </select>
+                  </p>
 
-              <!-- Apodo para Acceder -->
-              <div class="form-group">
-                <label for="apodo">Apodo para Acceder</label>
-                <input type="text" class="form-control" name="apodo" required />
-              </div>
+                  <p>
+                    <label for="pregunta">Pregunta para poder recordar tu contraseña</label>
+                    <select>
+                      <option value="">El nombre de tu primera mascota </option>
+                      <option value="">El Instituto donde estudiaste la ESO</option>
+                      <option value="">Nombre de tu Ciudad o Pueblo</option>
+                      <option value="">Provincia de tu Ciudad o Pueblo </option>
+                    </select>
+                  </p>
 
-              <!-- Nombre y Apellidos -->
-              <div class="form-group">
-                <label for="nombre y apellidos">Nombre y Apellidos (Opcional)</label>
-                <input type="text" class="form-control" name="nombreyapellidos" />
-              </div>
+                  <p>
+                    <label for="respuesta">Respuesta de Seguridad para recordar tu contraseña</label>
+                    <input type="text" class="form-control" name="respuesta"/>
+                  </p>
 
-              <!-- Pregunta -->
-              <div class="form-group">
-                <label for="pregunta">Pregunta para poder recordar tu contraseña</label>
-                <select>
-                  <option value="">El nombre de tu primera mascota </option>
-                  <option value="">El Instituto donde estudiaste la ESO</option>
-                  <option value="">Nombre de tu Ciudad o Pueblo</option>
-                  <option value="">Provincia de tu Ciudad o Pueblo </option>
-                </select>
-              </div>
+                  <p>
+                    <div class="row d-flex justify-content-center align-items-center">
+                      <div class="col">
+                        <div class="form-check mt-4">
+                          <input type="checkbox" class="form-check-input" checked>
+                          <label for="labelchekbox" class="form-check-label small">Recordar</label>
+                        </div>
+                      </div>
+                  </p>
 
-              <!-- Respuesta de Seguridad -->
-              <div class="form-group">
-                <label for="respuesta">Respuesta de Seguridad para recordar tu contraseña</label>
-                <input type="text" class="form-control" name="respuesta" />
-              </div>
-
-
-              <!-- Checkbox -->
-              <div class="row d-flex justify-content-center align-items-center">
-                <div class="col">
-                  <div class="form-check mt-4">
-                    <input type="checkbox" class="form-check-input" checked>
-                    <label for="labelchekbox" class="form-check-label small">Recordar</label>
+                  <p>
+                    <div class="col">
+                    <a href="#" class="text-black small"> ¿Has olvidado la contraseña?</a>
                   </div>
                 </div>
 
-                <div class="col">
-                  <a href="#" class="text-black small"> ¿Has olvidado la contraseña?</a>
-                </div>
-              </div>
+                     <input type="button" class="btn btn-danger btn-block mt-4" value="Comprobar Datos" onclick="validacion()"> 
 
+                     <input type="submit" class="btn btn-warning btn-block mt-4" value="Registrarse" onclick="validacion()"> 
+                  </p>
 
-              <!-- Button -->
-
-              <button type="submit" class="btn btn-danger btn-block mt-4" onclick="validación()">Acceder</button>
-
-
-              <div class="text-center mt-4">
-                <p class="small"> Ingresar con redes Sociales </p>
-                <a href="https://www.instagram.com/"> <button type="button" class="btn btn-info"><i class="bi bi-instagram"></i> <span class="texto">Comic
-                  Cloud</span></button> </a>
-              <a href="https://twitter.com/?lang=es"> <button type="button" class="btn btn-success"><i class="bi bi-twitter"></i> <span class="texto">Comic
-                  Cloud</span></button> </a>
-             <a href="https://es-es.facebook.com/"> <button type="button" class="btn btn-secondary"><i class="bi bi-facebook"></i> <span class="texto">Comic
-                  Cloud</span></button> </a>
-                  <a href="https://www.youtube.com/"> <button type="button" class="btn btn-danger"> <i class="bi bi-youtube"></i> <span class="texto">Comic
-                    Cloud</span></button> </a>
-            
-                    <a href="https://www.pinterest.es/"> <button type="button" class="btn btn-dark"> <i class="bi bi-pinterest"></i> <span class="texto">Comic
+                  <div class="text-center mt-4">
+                    <p class="small"> Ingresar con redes Sociales </p>
+                    <a href="https://www.instagram.com/"> <button type="button" class="btn btn-info"><i class="bi bi-instagram"></i> <span class="texto">Comic
                       Cloud</span></button> </a>
+                  <a href="https://twitter.com/?lang=es"> <button type="button" class="btn btn-success ml-2"><i class="bi bi-twitter"></i> <span class="texto">Comic
+                      Cloud</span></button> </a>
+                 <a href="https://es-es.facebook.com/"> <button type="button" class="btn btn-secondary mt-2"><i class="bi bi-facebook"></i> <span class="texto">Comic
+                      Cloud</span></button> </a>
+                      <a href="https://www.youtube.com/"> <button type="button" class="btn btn-danger mt-2"> <i class="bi bi-youtube"></i> <span class="texto">Comic
+                        Cloud</span></button> </a>
+                
+                        <a href="https://www.pinterest.es/"> <button type="button" class="btn btn-dark mt-2"> <i class="bi bi-pinterest"></i> <span class="texto">Comic
+                          Cloud</span></button> </a>
+                  </div>
+                </form>
               </div>
-            </form>
+    
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+              <button type="button" class="btn btn-primary">Guardar</button>
+            </div>
           </div>
-
         </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
-          <button type="button" class="btn btn-primary">Guardar</button>
         </div>
-      </div>
-    </div>
-    </div>
-
-    </div>
-
-
+    
+        </div>
 
 
     <!-- Etiqueta para hacer una curva -->
@@ -223,7 +219,7 @@
 
   <!-- Carrusel Boostrap 4.6 -->
 
-  <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+  <div id="carouselExampleIndicators" class="carousel" data-ride="carousel">
     <ol class="carousel-indicators">
       <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
       <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
@@ -269,42 +265,50 @@
   </section>
 
 
-
   <footer class="bg bg-primary">
-    <h2 class="text-white">@Copyright-José Manuel Cano González</h2>
-    <a href="https://www.instagram.com/"> <button type="button" class="btn btn-info"><i class="bi bi-instagram"></i> <span class="texto">Comic
-      Cloud</span></button> </a>
-  <a href="https://twitter.com/?lang=es"> <button type="button" class="btn btn-success"><i class="bi bi-twitter"></i> <span class="texto">Comic
-      Cloud</span></button> </a>
- <a href="https://es-es.facebook.com/"> <button type="button" class="btn btn-secondary"><i class="bi bi-facebook"></i> <span class="texto">Comic
-      Cloud</span></button> </a>
-      <a href="https://www.youtube.com/"> <button type="button" class="btn btn-danger"> <i class="bi bi-youtube"></i> <span class="texto">Comic
-        Cloud</span></button> </a>
-
-        <a href="https://www.pinterest.es/"> <button type="button" class="btn btn-info"> <i class="bi bi-pinterest"></i> <span class="texto">Comic
+        <h2 class="text-white">@Copyright-José Manuel Cano González</h2>
+        <a href="https://www.instagram.com/"> <button type="button" class="btn btn-info"><i class="bi bi-instagram"></i> <span class="texto">Comic
           Cloud</span></button> </a>
-  
-
-
-      <div class="container">
-        <div class="row">
-          <div class="col-5"><a href="perfillector.html">Visita los comics de la plataforma </a></div>
-          <div class="col"><a href="#">Gastos de Envió</a></div>
-          <div class="col"> <a href="#">Info</a></div>
-          <div class="col text-white">
-              <p>Contactános</p>
-              <p>Calle Verdilla</p>
-              <p>06830 La Zarza, Badajoz</p>
-              <p>+34 924 00 98 56</p>
-            
+        <a href="https://twitter.com/?lang=es"> <button type="button" class="btn btn-success ml-2 "><i class="bi bi-twitter"></i> <span class="texto">Comic
+          Cloud</span></button> </a>
+        <a href="https://es-es.facebook.com/"> <button type="button" class="btn btn-secondary mt-2"><i class="bi bi-facebook"></i> <span class="texto">Comic
+          Cloud</span></button> </a>
+          <a href="https://www.youtube.com/"> <button type="button" class="btn btn-danger mt-2"> <i class="bi bi-youtube"></i> <span class="texto">Comic
+            Cloud</span></button> </a>
+        
+            <a href="https://www.pinterest.es/"> <button type="button" class="btn btn-dark mt-2"> <i class="bi bi-pinterest"></i> <span class="texto">Comic
+              Cloud</span></button> </a>
+        
+        
+        
+          <div class="container">
+            <div class="row">
+              <div class="col-5"><a href="perfillector.html">Visita los comics de la plataforma </a></div>
+              <div class="col"><a href="#">Gastos de Envió</a></div>
+              <div class="col"> <a href="#">Info</a></div>
+              <div class="col text-white  mt-4 mr-2">
+                  <p>Contactános</p>
+                  <p>Calle Verdilla</p>
+                  <p>06830 La Zarza, Badajoz</p>
+                  <p>+34 924 00 98 56</p>
+                
+              </div>
+              <div class="col-5 ml-2"> <a href="#">Términos de Uso</a> </div>
+            </div>
+        
+           
           </div>
-          <div class="col-5"> <a href="#">Términos de Uso</a> </div>
-        </div>
+        </footer>
+    
 
-       
-      </div>
-  </footer>
 
+
+
+
+
+
+
+  
 
   
 

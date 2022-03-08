@@ -28,40 +28,46 @@ function Validar() {
     }
 }
 
-function validación(){
-    var falta = document.getElementById("alta")
 
-    // Comprobar campo nombre
 
-    if (falta.nombre.value.length==0 || falta.nombre.value == null || falta.nombre.value.length > 4) {
-        alert("Escribir un nombre");
-        falta.nombre.focus();
-        return 0;
-    }
+function validacion(){
 
-    // Edad
+    var falta = document.getElementById("alta");
+
+    //Campo nombre
+
+
+    //campo edad
 
     var edad = falta.edad.value;
-    if (edad == ""){
-        alert("Escribe una edad");
-        falta.edad.focus();
-    }else if(isNaN(edad)){
-        alert("Escribe una edad")
+    if(edad == ""){
+        alert("Escribe tu Edad")
+        falta.edad.focus()
+    }else if (isNaN(edad)){
+        alert("Escribe un numero relacionado con tu edad");
         falta.edad.focus();
     }else if (edad <18){
-        alert("No eres mayor de edad")
+        alert("Eres menor de Edad debes ser mayor de edad para poder registrate en nuestra plataforma")
         falta.edad.focus();
     }
 
-    // Campo Ciudad
-    
-    if (falta.ciudad.selectedIndex == 0){
-        alert("Debes coger una ciudad");
+
+    //campo ciudad
+
+    if (falta.cuidad.selectedIndex == 0){
+        alert("Elije una ciudad")
         falta.ciudad.focus();
     }
 
-    alert("Muchas gracias por registrate")
+    alert("Muchaas gracias por Registrate");
     falta.submit();
 
+
+
+    
+    
+
 }
+
+
 
